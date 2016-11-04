@@ -4,7 +4,10 @@ import android.app.admin.DeviceAdminReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.widget.Toast;
+
+import static android.content.ContentValues.TAG;
 
 public class MyAdmin extends DeviceAdminReceiver{
 
@@ -39,6 +42,7 @@ public class MyAdmin extends DeviceAdminReceiver{
 
     @Override
     public void onPasswordChanged(Context context, Intent intent) {
+        Log.e(TAG, "onPasswordChanged: " + intent  );
         showToast(context, "Sample Device Admin: pw changed");
     }
 
@@ -49,6 +53,7 @@ public class MyAdmin extends DeviceAdminReceiver{
 
     @Override
     public void onPasswordSucceeded(Context context, Intent intent) {
+        Log.e(TAG, "onPasswordSucceeded: " + intent );
         showToast(context, "Sample Device Admin: pw succeeded");
     } 
 

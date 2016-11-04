@@ -23,8 +23,24 @@
         android:text="Disable" />
     <Button
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ben_status"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:text="CheckStatus"/>
+
+    <Button
+        android:layout_width="wrap_content"
         android:id="@+id/btnEnable"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:text="Enable" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>
