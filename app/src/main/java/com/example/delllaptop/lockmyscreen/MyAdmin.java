@@ -1,6 +1,7 @@
 package com.example.delllaptop.lockmyscreen;
 
 import android.app.admin.DeviceAdminReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -44,6 +45,11 @@ public class MyAdmin extends DeviceAdminReceiver{
     public void onPasswordChanged(Context context, Intent intent) {
         Log.e(TAG, "onPasswordChanged: " + intent  );
         showToast(context, "Sample Device Admin: pw changed");
+
+        Intent it = new Intent("intent.my.action");
+        it.setComponent(new ComponentName(context.getPackageName(), MainActivity.class.getName()));
+        it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.getApplicationContext().startActivity(it);
     }
 
     @Override

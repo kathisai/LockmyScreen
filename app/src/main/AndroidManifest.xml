@@ -14,6 +14,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="intent.my.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <receiver android:name=".MyAdmin"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
